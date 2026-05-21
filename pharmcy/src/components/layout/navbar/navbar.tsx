@@ -134,22 +134,16 @@ export default function Navbar() {
             </button>
 
             {/* Dark / Light */}
-  <button
-    onClick={() => setDarkMode(!darkMode)}
-    className="border border-gray-200 hover:bg-gray-100 transition p-1.5 rounded-full"
-  >
-    {darkMode ? (
-      <Sun
-        size={16}
-        className="text-[#14b8a6]"
-      />
-    ) : (
-      <Moon
-        size={16}
-        className="text-[#14b8a6]"
-      />
-    )}
-  </button>
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="border border-gray-200 hover:bg-gray-100 transition p-1.5 rounded-full"
+            >
+              {darkMode ? (
+                <Sun size={16} className="text-[#14b8a6]" />
+              ) : (
+                <Moon size={16} className="text-[#14b8a6]" />
+              )}
+            </button>
 
             {/* Cart */}
             <button className="relative">
