@@ -1,3 +1,11 @@
+import HeroBanner from "../components/home/banner";
+import Footer from "../components/layout/navbar/footer";
+
 export default async function Home() {
-  return <div className="px-6 space-y-10"></div>;
+  return (
+    <div >
+      <HeroBanner/>
+      <Footer/>
+    </div>
+  );
 }
