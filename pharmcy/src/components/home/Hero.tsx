@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Pill, Upload } from "lucide-react";
 
-export default function HeroBanner() {
+export default function Hero() {
   const categories = [
     {
       title: "Supplements",
@@ -25,11 +25,9 @@ export default function HeroBanner() {
   ];
 
   return (
-    <section className="bg-[#f7fcfb]">
-
+    <section className="bg-[#f7fcfb] pb-5">
       {/* MAIN BANNER */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#eef6ff] via-[#f5fbff] to-[#e7faf7] min-h-[300px] pt-5">
-
         {/* FLOATING ITEMS */}
         <motion.div
           animate={{ y: [0, -12, 0] }}
@@ -49,12 +47,7 @@ export default function HeroBanner() {
           transition={{ duration: 5, repeat: Infinity }}
           className="absolute top-14 left-[42%]"
         >
-          <Image
-            src="/images/jar.webp"
-            alt="bottle"
-            width={150}
-            height={150}
-          />
+          <Image src="/images/jar.webp" alt="bottle" width={150} height={150} />
         </motion.div>
 
         <motion.div
@@ -72,7 +65,6 @@ export default function HeroBanner() {
 
         {/* MAIN CONTENT */}
         <div className="relative z-10 grid lg:grid-cols-2 items-center min-h-[540px]">
-
           {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -80,12 +72,9 @@ export default function HeroBanner() {
             transition={{ duration: 0.8 }}
             className="px-8 lg:px-16 py-6"
           >
-
             {/* TITLE */}
             <h1 className="text-[44px] lg:text-[62px] leading-[1] font-bold text-[#115e59]">
-
               Your Trusted
-
               <span className="block mt-3 bg-gradient-to-r from-[#14b8a6] via-[#0f9b8e] to-[#115e59] bg-clip-text text-transparent">
                 Online Pharmacy
               </span>
@@ -100,7 +89,6 @@ export default function HeroBanner() {
 
             {/* BUTTONS */}
             <div className="flex flex-wrap gap-5 mt-6">
-
               {/* SHOP BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.03 }}
@@ -110,7 +98,6 @@ export default function HeroBanner() {
                 <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
                   <Pill size={18} />
                 </div>
-
                 Shop Medicines
               </motion.button>
 
@@ -123,14 +110,12 @@ export default function HeroBanner() {
                 <div className="w-9 h-9 rounded-full bg-[#14b8a6]/10 flex items-center justify-center">
                   <Upload size={18} />
                 </div>
-
                 Upload Prescription
               </motion.button>
             </div>
 
             {/* CATEGORIES */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-8">
-
               {categories.map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -140,7 +125,6 @@ export default function HeroBanner() {
                   whileHover={{ y: -5 }}
                   className="bg-white/60 backdrop-blur-xl border border-white/60 rounded-[28px] p-5 text-center shadow-[0_10px_30px_rgba(15,118,110,0.05)]"
                 >
-
                   <div className="flex justify-center">
                     <Image
                       src={item.image}
@@ -166,7 +150,6 @@ export default function HeroBanner() {
             transition={{ duration: 1 }}
             className="relative flex items-end justify-center h-full"
           >
-
             {/* MAIN CURVED SHAPE */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[470px] h-[540px] bg-[#14b8a6] rounded-t-[240px]" />
 

@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
-import Navbar from "../components/layout/navbar/navbar";
-// import Footer from "../components/layout/footer/footer";
-// import TopBar from "../components/layout/topbar/topbar";
-// import Features from "../components/layout/features/features";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-// import { Toaster } from "sonner";
-// import Providers from "./providers";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+
+import "./globals.css";
+
+import { cn } from "@/lib/utils";
+import Navbar from "../components/layout/navbar";
+import Footer from "../components/layout/footer";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,19 +34,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn("font-sans", inter.variable)}>
+    <html
+      lang="en"
+      className={cn("font-sans", inter.variable)}
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        
-          <Navbar />
+        <Navbar />
 
-          {children}
+        {children}
 
-          {/* <Features />
-          <Footer /> */}
-          {/* <Toaster richColors position="top-center" /> */}
-        
+        <Footer />
       </body>
     </html>
   );
